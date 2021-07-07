@@ -12,4 +12,17 @@ Bundler.require
 # put the code to connect to the database here
 
 
+
+
+ 
+
+
+
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite3",
+  :database => "db/artists.sqlite"
+)
+
+#ActiveRecord::Base.connection.execute(sql)
+
 require_relative "../artist.rb"
